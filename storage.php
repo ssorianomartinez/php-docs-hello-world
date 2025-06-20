@@ -7,7 +7,7 @@ use MicrosoftAzure\Storage\Common\Exceptions\ServiceException;
 
 // Configuración
 $connectionString = getenv("AZURE_STORAGE_CONNECTION_STRING");
-$containerName = "comprimidos";  // Cambia esto por el nombre de tu contenedor
+$containerName = "descomprimidos";  // Cambia esto por el nombre de tu contenedor
 
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
