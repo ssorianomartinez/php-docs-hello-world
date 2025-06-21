@@ -42,7 +42,7 @@ try {
 
        echo "Esic fora del While";
        
-       while($row = mysqli_fetch_assoc($result)) {
+       while($row = $result->fetch()) {
            echo "Estic dins del While";
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
