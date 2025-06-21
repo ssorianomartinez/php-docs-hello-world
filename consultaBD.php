@@ -37,7 +37,7 @@ try {
         
     echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual']; 
        
-       $query = "SELECT * FROM $usuaris";
+       $query = "SELECT * FROM usuaris";
        $result = $pdo->query($query);
 
        echo "Esic fora del While";
