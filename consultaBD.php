@@ -37,8 +37,11 @@ try {
        
        $query = "SELECT * FROM $usuaris";
        $result = mysqli_query($query,$pdo);
- 
+
+       echo "Esic fora del While";
+       
        while($row = mysqli_fetch_assoc($result)) {
+           echo "Estic dins del While";
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
         }
