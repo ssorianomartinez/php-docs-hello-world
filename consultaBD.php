@@ -33,7 +33,8 @@ try {
     // Ejemplo: consulta sencilla
     $stmt = $pdo->query('SELECT NOW() AS fecha_actual;');
     $fila = $stmt->fetch();
-     
+    echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual']; 
+       
        $query = "SELECT * FROM $usuaris";
        $result = mysqli_query($query,$pdo);
  
@@ -41,7 +42,7 @@ try {
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
         }
-    echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual'];
+  
 
     // Extraer información de la base de datos prueba, tabla usuaris
 
