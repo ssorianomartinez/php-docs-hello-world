@@ -33,6 +33,8 @@ try {
     // Ejemplo: consulta sencilla
     $stmt = $pdo->query('SELECT NOW() AS fecha_actual;');
     $fila = $stmt->fetch();
+    echo "Abans del missatge de connexió"; 
+        
     echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual']; 
        
        $query = "SELECT * FROM $usuaris";
