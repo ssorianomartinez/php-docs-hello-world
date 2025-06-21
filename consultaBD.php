@@ -35,7 +35,7 @@ try {
     $fila = $stmt->fetch();
      
        $query = "SELECT * FROM $usuaris";
-       $result = mysqli_query($query,$this->pdo);
+       $result = mysqli_query($query,$pdo);
  
         while($row = mysqli_fetch_assoc($result)) {
             echo nl2br ($row['column_name']."\n"); 
