@@ -38,7 +38,7 @@ try {
     // Extraer información de la base de datos prueba, tabla usuaris
 
        $query = "SELECT * FROM $usuaris";
-       $result = mysqli_query($this->conn, $query);
+       $result = mysqli_query($this->pdo, $query);
  
         while($row = mysqli_fetch_assoc($result)) {
             echo nl2br ($row['column_name']."\n"); 
