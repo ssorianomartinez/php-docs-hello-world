@@ -33,17 +33,17 @@ try {
     // Ejemplo: consulta sencilla
     $stmt = $pdo->query('SELECT NOW() AS fecha_actual;');
     $fila = $stmt->fetch();
-    echo "Abans del missatge de connexió"; 
         
     echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual']; 
        
        $query = "SELECT * FROM usuaris";
        $result = $pdo->query($query);
 
-       echo "Esic fora del While";
+   
        
        while($row = $result->fetch()) {
-           echo "Estic dins del While";
+      
+            echo "\n\n";
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
         }
