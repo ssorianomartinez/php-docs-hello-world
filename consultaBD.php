@@ -42,8 +42,6 @@ try {
    
        
        while($row = $result->fetch()) {
-      
-            echo "\n\n";
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
         }
