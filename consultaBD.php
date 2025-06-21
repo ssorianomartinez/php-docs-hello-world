@@ -33,10 +33,7 @@ try {
     // Ejemplo: consulta sencilla
     $stmt = $pdo->query('SELECT NOW() AS fecha_actual;');
     $fila = $stmt->fetch();
-    echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual'];
-
-    // Extraer información de la base de datos prueba, tabla usuaris
-
+     
        $query = "SELECT * FROM $usuaris";
        $result = mysqli_query($this->pdo, $query);
  
@@ -44,6 +41,11 @@ try {
             echo nl2br ($row['column_name']."\n"); 
             echo print_r($row);  
         }
+    echo "Conectado correctamente. Hora del servidor: " . $fila['fecha_actual'];
+
+    // Extraer información de la base de datos prueba, tabla usuaris
+
+  
 } catch (PDOException $e) {
     error_log('Error de conexión PDO: ' . $e->getMessage());
     echo "Error al conectar con la base de datos: " . htmlspecialchars($e->getMessage());
